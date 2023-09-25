@@ -1,0 +1,27 @@
+<h1>Index</h1>
+<hr>
+
+<div class="card-body">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descricao</th>
+                <th>Preco</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->view->dados as $indice => $produtos) : ?>
+                <tr>
+                    <td><?= $produtos['id']; ?></td>
+                    <td><?= $produtos['descricao']; ?></td>
+                    <td><?= $produtos['preco']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+
+
+
