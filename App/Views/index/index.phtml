@@ -1,27 +1,35 @@
-<h1>Index</h1>
-<hr>
-
-<div class="card-body">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Descricao</th>
-                <th>Preco</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($this->view->dados as $indice => $produtos) : ?>
+<div class="card">
+    <div class="card-header d-flex flex-wrap justify-content-between align-content-center">
+        <h5 class="mt-auto mb-auto">Lista de livros</h5>
+        <button class="btn btn-outline-dark">
+            Adicionar
+        </button>
+    </div>
+    <div class="card-body responsive-table">
+        <table class="table">
+            <thead class="table-dark">
                 <tr>
-                    <td><?= $produtos['id']; ?></td>
-                    <td><?= $produtos['descricao']; ?></td>
-                    <td><?= $produtos['preco']; ?></td>
+                    <th>Id</th>
+                    <th>Livro</th>
+                    <th>Preco</th>
+                    <th style="width: 160px;"></th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php foreach ($this->view->dados as $indice => $produtos) : ?>
+                    <tr>
+                        <td><?= $produtos['id']; ?></td>
+                        <td><?= $produtos['descricao']; ?></td>
+                        <td><?= $produtos['preco']; ?></td>
+                        <td>
+                            <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash3"></i></button>
+                            <button class="btn btn-sm btn-primary "><i class='bi bi-heart'></i></button>
+                            <button class="btn btn-sm btn-secondary"><i class='bi bi-cart'></i></button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-
-
-

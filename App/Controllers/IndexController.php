@@ -8,7 +8,7 @@
   use App\Models\Info;
   
   class IndexController extends Action{
-    
+
     public function index(){
       //$this->view ->dados = array("Fone de ouvido","Tablet","Celular");
       $produto = Container::getModel('Produtos');

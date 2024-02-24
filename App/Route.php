@@ -5,8 +5,14 @@
   class Route extends Bootstrap{
 
     protected function initRoutes(){
-      $routes['home'] = array(
+      $routes['login'] = array(
         'route' => '/',
+        'controller' => 'loginController',
+        'action' => 'login',
+      );
+
+      $routes['home'] = array(
+        'route' => '/home',
         'controller' => 'indexController',
         'action' => 'index',
       );
